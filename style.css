@@ -425,6 +425,13 @@ footer { background: var(--offblack); padding: 3.5rem 0; }
 .lang-switcher a:hover { color: var(--black); }
 .lang-switcher a.lang-active { color: var(--black); border-bottom: 1px solid var(--black); }
 
+/* ── Desktop typography ───────────────────────────────────────────── */
+@media (min-width: 1024px) {
+  h1 { font-size: 5.5rem; }
+  h2 { font-size: 5rem; }
+  .hero h1 { font-size: 5.5rem; }
+}
+
 /* ── Responsive ───────────────────────────────────────────────────── */
 @media (max-width: 768px) {
   .nav-inner { height: 60px; flex-wrap: nowrap; }
