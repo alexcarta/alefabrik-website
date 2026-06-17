@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Informazioni legali — Ale Fabrik</title>
+  <link rel="canonical" href="https://www.alefabrik.com/it/impressum.html">
+  <link rel="alternate" hreflang="en" href="https://www.alefabrik.com/en/impressum.html">
+  <link rel="alternate" hreflang="it" href="https://www.alefabrik.com/it/impressum.html">
+  <link rel="alternate" hreflang="de" href="https://www.alefabrik.com/de/impressum.html">
+  <link rel="stylesheet" href="../style.css?v=8">
+</head>
+<body>
+<nav>
+  <div class="nav-inner">
+    <a href="/it/index.html" class="nav-logo"><span class="ale">Ale</span><span class="fabrik">Fabrik</span></a>
+    <button class="nav-hamburger" aria-label="Apri menu" onclick="toggleMenu()"><span></span><span></span><span></span></button>
+    <ul class="nav-links" id="nav-links">
+      <li><a href="/it/services.html">Servizi</a></li>
+      <li><a href="/it/about.html">Chi sono</a></li>
+      <li><a href="/it/contact.html">Contatti</a></li>
+    </ul>
+    <div class="lang-switcher">
+      <a href="/en/impressum.html" hreflang="en">EN</a>
+      <a href="/it/impressum.html" hreflang="it" class="lang-active">IT</a>
+      <a href="/de/impressum.html" hreflang="de">DE</a>
+    </div>
+  </div>
+</nav>
+<div class="nav-dropdown" id="nav-dropdown">
+  <a href="/it/services.html">Servizi</a>
+  <a href="/it/about.html">Chi sono</a>
+  <a href="/it/contact.html">Contatti</a>
+  <div class="dropdown-lang">
+    <a href="/en/impressum.html">EN</a>
+    <a href="/it/impressum.html" class="lang-active">IT</a>
+    <a href="/de/impressum.html">DE</a>
+  </div>
+</div>
+<section>
+  <div class="container">
+    <h1 style="margin-bottom: 2rem;">Informazioni legali</h1>
+    <div class="legal-content">
+      <p><strong>Informazioni ai sensi del §5 TMG (Legge tedesca sui media telematici)</strong></p>
+      <p>Alessandro Carta<br>Niederbarnimstraße 7<br>10247 Berlino, Germania</p>
+      <p><strong>Contatto</strong><br>Email: hello@alefabrik.com<br>Telefono: +4915906375891</p>
+      <p><strong>Informazioni fiscali</strong><br>Numero fiscale: placeholder<br>Ai sensi del §19 UStG, non viene applicata l'IVA.</p>
+      <p><strong>Responsabile dei contenuti ai sensi del §55 comma 2 RStV</strong><br>Alessandro Carta, Niederbarnimstraße 7, 10247 Berlino</p>
+      <h2>Risoluzione delle controversie</h2>
+      <p>La Commissione europea mette a disposizione una piattaforma per la risoluzione delle controversie online (ODR): <a href="https://ec.europa.eu/consumers/odr/" target="_blank" rel="noopener">https://ec.europa.eu/consumers/odr/</a>. Non siamo disposti né obbligati a partecipare a procedure di risoluzione delle controversie davanti a un organismo di conciliazione per i consumatori.</p>
+      <h2>Responsabilità per i contenuti</h2>
+      <p>In qualità di fornitore di servizi, siamo responsabili dei contenuti propri presenti in queste pagine ai sensi della normativa generale, conformemente al §7 comma 1 TMG. Tuttavia, ai sensi dei §§8-10 TMG, non siamo obbligati a monitorare le informazioni di terzi trasmesse o memorizzate.</p>
+      <h2>Diritto d'autore</h2>
+      <p>I contenuti e le opere creati dall'operatore del sito su queste pagine sono soggetti alla legge tedesca sul diritto d'autore. La riproduzione, l'elaborazione, la distribuzione e qualsiasi tipo di utilizzo al di fuori dei limiti del diritto d'autore richiedono il consenso scritto del rispettivo autore.</p>
+    </div>
+  </div>
+</section>
+<footer>
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <a href="/it/index.html" class="nav-logo"><span class="ale">Ale</span><span class="fabrik">Fabrik</span></a>
+    </div>
+    <nav class="footer-links">
+      <a href="/it/privacy.html">Privacy Policy</a>
+      <a href="/it/impressum.html">Informazioni legali</a>
+      <a href="/it/terms.html">Termini</a>
+    </nav>
+    <div class="footer-copy">Alessandro Carta · Niederbarnimstraße 7, 10247, Berlino, Germania · hello@alefabrik.com</div>
+  </div>
+</footer>
+<script>
+function toggleMenu() {
+  var btn = document.querySelector('.nav-hamburger');
+  var dd = document.getElementById('nav-dropdown');
+  btn.classList.toggle('open');
+  dd.classList.toggle('open');
+}
+</script>
+</body>
+</html>

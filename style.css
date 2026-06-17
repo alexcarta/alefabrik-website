@@ -204,6 +204,7 @@ body > nav {
   display: flex;
   align-items: flex-start;
 }
+.hero .container { width: 100%; }
 .hero-eyebrow {
   font-size: 0.72rem;
   font-weight: 400;

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Datenschutzerklärung — Ale Fabrik</title>
+  <link rel="canonical" href="https://www.alefabrik.com/de/privacy.html">
+  <link rel="alternate" hreflang="en" href="https://www.alefabrik.com/en/privacy.html">
+  <link rel="alternate" hreflang="it" href="https://www.alefabrik.com/it/privacy.html">
+  <link rel="alternate" hreflang="de" href="https://www.alefabrik.com/de/privacy.html">
+  <link rel="stylesheet" href="../style.css?v=8">
+</head>
+<body>
+<nav>
+  <div class="nav-inner">
+    <a href="/de/index.html" class="nav-logo"><span class="ale">Ale</span><span class="fabrik">Fabrik</span></a>
+    <button class="nav-hamburger" aria-label="Menü öffnen" onclick="toggleMenu()"><span></span><span></span><span></span></button>
+    <ul class="nav-links" id="nav-links">
+      <li><a href="/de/services.html">Leistungen</a></li>
+      <li><a href="/de/about.html">Über mich</a></li>
+      <li><a href="/de/contact.html">Kontakt</a></li>
+    </ul>
+    <div class="lang-switcher">
+      <a href="/en/privacy.html" hreflang="en">EN</a>
+      <a href="/it/privacy.html" hreflang="it">IT</a>
+      <a href="/de/privacy.html" hreflang="de" class="lang-active">DE</a>
+    </div>
+  </div>
+</nav>
+<div class="nav-dropdown" id="nav-dropdown">
+  <a href="/de/services.html">Leistungen</a>
+  <a href="/de/about.html">Über mich</a>
+  <a href="/de/contact.html">Kontakt</a>
+  <div class="dropdown-lang">
+    <a href="/en/privacy.html">EN</a>
+    <a href="/it/privacy.html">IT</a>
+    <a href="/de/privacy.html" class="lang-active">DE</a>
+  </div>
+</div>
+<section>
+  <div class="container">
+    <h1 style="margin-bottom: 0.5rem;">Datenschutzerklärung</h1>
+    <p style="margin-bottom: 2rem; font-size: 0.85rem;">Stand: 12. Juni 2026</p>
+    <div class="legal-content">
+      <h2>1. Verantwortlicher</h2>
+      <p>Alessandro Carta, handelnd als Ale Fabrik<br>Niederbarnimstraße 7, 10247 Berlin, Deutschland<br>E-Mail: hello@alefabrik.com</p>
+      <h2>2. Erhobene Daten und Zweck</h2>
+      <h3>Kontaktformular</h3>
+      <p>Bei Nutzung des Kontaktformulars erhebe ich deinen Namen, deine E-Mail-Adresse, den Nachrichteninhalt sowie Datum und Uhrzeit der Übermittlung. Diese Daten werden ausschließlich zur Beantwortung deiner Anfrage genutzt. Rechtsgrundlage: Art. 6 Abs. 1 lit. b und lit. f DSGVO.</p>
+      <h3>Server-Logs (GitHub Pages)</h3>
+      <p>Diese Website wird auf GitHub Pages gehostet (GitHub, Inc., 88 Colin P. Kelly Jr. Street, San Francisco, CA 94107, USA). GitHub kann automatisch Server-Log-Daten einschließlich IP-Adresse und Browsertyp erfassen. Weitere Informationen findest du in der <a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement" target="_blank" rel="noopener">Datenschutzerklärung von GitHub</a>.</p>
+      <h2>3. Formspree — Formularverarbeitung</h2>
+      <p>Kontaktformular-Übermittlungen werden von Formspree, Inc. als Auftragsverarbeiter verarbeitet. Ein Auftragsverarbeitungsvertrag ist abgeschlossen. Weitere Informationen findest du in der <a href="https://formspree.io/legal/privacy-policy/" target="_blank" rel="noopener">Datenschutzerklärung von Formspree</a>.</p>
+      <h2>4. Datenübermittlung in Drittländer</h2>
+      <p>GitHub Pages wird in den USA gehostet. GitHub nimmt am EU-U.S. Data Privacy Framework teil.</p>
+      <h2>5. Speicherdauer</h2>
+      <p>Kontaktanfragen werden maximal 24 Monate aufbewahrt, sofern keine gesetzliche Aufbewahrungspflicht eine längere Frist vorschreibt.</p>
+      <h2>6. Deine Rechte nach der DSGVO</h2>
+      <p>Du hast das Recht auf Auskunft, Berichtigung, Löschung, Einschränkung der Verarbeitung, Widerspruch sowie Datenübertragbarkeit. Zur Ausübung dieser Rechte wende dich an: hello@alefabrik.com</p>
+      <p>Du hast außerdem das Recht, dich beim <a href="https://www.bfdi.bund.de" target="_blank" rel="noopener">Bundesbeauftragten für den Datenschutz und die Informationsfreiheit (BfDI)</a> zu beschweren.</p>
+      <h2>7. Cookies</h2>
+      <p>Diese Website verwendet ausschließlich technisch notwendige Cookies der Hosting-Infrastruktur. Kein Tracking, keine Analyse, keine Werbe-Cookies. Eine Einwilligung ist nicht erforderlich.</p>
+    </div>
+  </div>
+</section>
+<footer>
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <a href="/de/index.html" class="nav-logo"><span class="ale">Ale</span><span class="fabrik">Fabrik</span></a>
+    </div>
+    <nav class="footer-links">
+      <a href="/de/privacy.html">Datenschutz</a>
+      <a href="/de/impressum.html">Impressum</a>
+      <a href="/de/terms.html">AGB</a>
+    </nav>
+    <div class="footer-copy">Alessandro Carta · Niederbarnimstraße 7, 10247, Berlin, Germany · hello@alefabrik.com · Gemäß §19 UStG wird keine Umsatzsteuer berechnet.</div>
+  </div>
+</footer>
+<script>
+function toggleMenu() {
+  var btn = document.querySelector('.nav-hamburger');
+  var dd = document.getElementById('nav-dropdown');
+  btn.classList.toggle('open');
+  dd.classList.toggle('open');
+}
+</script>
+</body>
+</html>
