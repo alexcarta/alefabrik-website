@@ -67,10 +67,43 @@
   <div class="container">
     <span class="hero-eyebrow">Modern websites · For local businesses everywhere</span>
     <h1>Your business is good.<br><em>Your website should be too.</em></h1>
-    <p class="lead">I build fast, affordable websites for local businesses everywhere — restaurants, shops, artisans, service providers. Google Business setup included. Live in a week. One person, direct contact, no agency.</p>
-    <div class="btn-row">
-      <a href="/en/contact.html" class="btn btn-primary">Get started</a>
-      <a href="/en/services.html" class="btn btn-ghost">See what's included</a>
+    <div class="hero-bottom">
+      <div class="hero-bottom-left">
+        <p class="lead">I build fast, affordable websites for local businesses everywhere — restaurants, shops, artisans, service providers. Google Business setup included. Live in a week. One person, direct contact, no agency.</p>
+        <div class="btn-row">
+          <a href="/en/contact.html" class="btn btn-primary">Get started</a>
+          <a href="/en/services.html" class="btn btn-ghost">See what's included</a>
+        </div>
+      </div>
+      <div class="hb-wrap" aria-hidden="true">
+        <div class="hb-window">
+          <div class="hb-bar">
+            <span class="hb-dot"></span><span class="hb-dot"></span><span class="hb-dot"></span>
+            <div class="hb-url">alefabrik.com</div>
+          </div>
+          <div class="hb-canvas">
+            <div class="hb-nav">
+              <div class="hb-logo"><span class="ale">Your</span><span class="fab">Webpage</span></div>
+              <div class="hb-navlinks"><span></span><span></span><span></span></div>
+            </div>
+            <div class="hb-headline"></div>
+            <div class="hb-body">
+              <div class="hb-col">
+                <div class="hb-rows"><span style="width:92%"></span><span style="width:80%"></span><span style="width:86%"></span></div>
+                <div class="hb-btn">Get started</div>
+              </div>
+              <div class="hb-image">
+                <svg viewBox="0 0 48 36" width="34" height="26" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round">
+                  <rect x="3" y="3" width="42" height="30" rx="2"></rect>
+                  <circle cx="16" cy="14" r="4"></circle>
+                  <path d="M3 27l11-9 8 6 7-6 11 9"></path>
+                </svg>
+              </div>
+            </div>
+          </div>
+          <div class="hb-live"><span class="hb-live-dot"></span>Live in a week</div>
+        </div>
+      </div>
     </div>
   </div>
 </section>
@@ -178,6 +211,38 @@ function toggleMenu() {
 }
 function dismissCookie() { document.getElementById('cookie-notice').style.display='none'; localStorage.setItem('cookieDismissed','1'); }
 if (localStorage.getItem('cookieDismissed')) document.getElementById('cookie-notice').style.display='none';
+
+(function() {
+  var wrap = document.querySelector('.hb-wrap');
+  if (!wrap) return;
+  var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var FULL = 'Trattoria da Marco';
+  var headline = wrap.querySelector('.hb-headline');
+  var TOTAL = 5;
+  if (reduce) { wrap.setAttribute('data-step', TOTAL); headline.textContent = FULL; return; }
+  var timers = [];
+  function clearAll() { timers.forEach(clearTimeout); timers = []; }
+  function run() {
+    clearAll();
+    wrap.setAttribute('data-step', '0');
+    headline.textContent = '';
+    for (var i = 1; i <= FULL.length; i++) {
+      (function(idx) {
+        timers.push(setTimeout(function() {
+          headline.innerHTML = FULL.slice(0, idx) + '<span class="hb-caret"></span>';
+        }, 500 + idx * 55));
+      })(i);
+    }
+    var headDone = 500 + FULL.length * 55;
+    timers.push(setTimeout(function() { headline.textContent = FULL; }, headDone));
+    var seq = [[1, headDone + 250], [2, headDone + 650], [3, headDone + 1050], [4, headDone + 1500], [5, headDone + 1550]];
+    seq.forEach(function(pair) {
+      timers.push(setTimeout(function() { wrap.setAttribute('data-step', pair[0]); }, pair[1]));
+    });
+    timers.push(setTimeout(run, headDone + 5200));
+  }
+  run();
+})();
 </script>
 </body>
 </html>
